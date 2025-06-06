@@ -1,0 +1,17 @@
+Copyright (c) 2025 Osama Bassam  
+All rights reserved.
+
+This software and associated documentation files are the intellectual property of the author.  
+No permission is granted to use, copy, modify, merge, publish, distribute, sublicense, or sell any part of the software without explicit written permission from the author.
+
+Unauthorized use is strictly prohibited and may result in legal action.
+
+---
+
+حقوق النشر © 2025 أسامة بسّام  
+جميع الحقوق محفوظة.
+
+جميع ملفات هذا المشروع، بما فيها الكود والمستندات المرافقة، هي ملكية فكرية لصاحب المشروع.  
+لا يُسمح باستخدام أو نسخ أو تعديل أو نشر أو توزيع أو بيع أي جزء من هذا المشروع دون إذن كتابي صريح من المؤلف.
+
+أي استخدام غير مصرح به ممنوع ويعرض صاحبه للمساءلة القانونية.
