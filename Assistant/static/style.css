@@ -1,0 +1,422 @@
+/* =============== GLOBAL =============== */
+
+
+/* =============== HEADER =============== */
+header {
+  background-image: url('brain-waves.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 4rem 1rem 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+header h1, header p {
+  position: relative;
+  z-index: 2;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at center, #102b4d, #1b3c66, #0a1a2f);
+  background-size: 100% 100%;
+  animation: radialPulse 10s ease-in-out infinite;
+  color: #F0EFE9;
+}
+
+@keyframes radialPulse {
+  0%, 100% { background-size: 100% 100%; }
+  50%      { background-size: 110% 110%; }
+}
+
+nav {
+  margin: 0;
+  padding: 0.5rem 0; /* Adds vertical thickness */
+  background: linear-gradient(135deg, #0a1a2f, #102b4d, #1b3c66, #102b4d, #0a1a2f);
+  background-size: 200% 200%;
+  animation: diagonalShift 50s ease-in-out infinite;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #1b3c66;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+
+@keyframes diagonalShift {
+  0%   { background-position: 0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* =============== NAVIGATION =============== */
+/* Full-width nav bar background */
+
+/* Center the nav links inside */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;   /* same as your main content */
+  margin: 0 auto;
+}
+.nav-center a {
+  color: #F0EFE9;
+  text-decoration: none;
+  padding: 14px 26px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(to right, #003366, #004c99);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.nav-center a:hover {
+  background: linear-gradient(to right, #004c99, #003366);
+  transform: translateY(-2px) scale(1.05);
+  color: white;
+  box-shadow: 0 0 10px rgba(43, 122, 120, 0.8);
+}
+
+
+.plot-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =============== MAIN CONTENT =============== */
+main {
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  background: rgba(240, 239, 233, 0.9);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #2B7A78;
+}
+/* Only for base.html header h1 */
+.main-title {
+  font-family: 'Orbitron', sans-serif; /* Use your desired font */
+  font-size: 2.8rem;
+  color: #FFFAE3;
+  text-align: center;
+  margin: 0;
+  padding: 2rem 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ====================== HOW IT WORKS SECTION ====================== */
+.how-section {
+  color: black;
+  background-color: #f5f8f9;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+/* Headings */
+.how-section h2, 
+.how-section h3 {
+  font-weight: 700;
+  text-align: center;
+  color: #17252A;
+  margin-bottom: 1rem;
+}
+
+/* Description text */
+.how-section p {
+  font-size: 1rem;
+  color: #222;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Image block */
+.how-section img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Steps List */
+.how-section ul {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.how-section li {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+  color: #17252A;
+}
+
+/* ====================== CONTACT SECTION STYLES ====================== */
+.contact-section {
+  color: black;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #f0f4f8, #e8f1ec);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.contact-section h2,
+.contact-section h3,
+.contact-section p,
+.contact-section label,
+.contact-section ul,
+.contact-section li {
+  color: black;
+}
+
+/* Input fields and textarea */
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: black;
+  background-color: #fff;
+}
+
+/* Button styling */
+.contact-section button {
+  display: block;
+  margin: 10px auto 0 auto;
+  background: linear-gradient(to right, #003366, #004c99);
+
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-section button:hover {
+  background: linear-gradient(to right, #1E5A5A, #294E58);
+  transform: scale(1.05);
+}
+
+/* Add space above lists if needed */
+.contact-section ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+
+h1, h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #17252A;
+  text-align: center;
+  margin-bottom: 20px;
+}
+section img, .plot-container img, .pie-chart-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+
+
+/* =============== FORMS & INPUTS =============== */
+label {
+  font-weight: 600;
+  color: #294E58;
+  display: block;
+  margin-bottom: 6px;
+}
+input[type=file], input[type=number], #uploadForm input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #3A5A40;
+  background: #E0FBFC;
+  color: #17252A;
+  font-size: .9rem;
+  margin-bottom: 15px;
+}
+#uploadForm {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#uploadForm label {
+  font-size: 1rem;
+  color: #333333;
+}
+#uploadForm input[type="file"]:hover {
+  border-color: #6366F1;
+  background-color: #F3F4F6;
+}
+
+/* =============== BUTTONS =============== */
+button, #uploadForm button {
+  background: linear-gradient(to right, #001f3f, #004c99);
+
+  color: #F0EFE9;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .95rem;
+  transition: .3s;
+}
+button:hover, #uploadForm button:hover {
+  background: linear-gradient(to right, #004c99, #003366);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 116, 217, 0.5);
+}
+
+/* =============== EEG ANALYZER =============== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.controls > div {
+  flex: 1;
+  min-width: 200px;
+}
+.radio-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.radio-group label {
+  margin: 0;
+  color: #17252A;
+}
+
+.btn-group > .multiselect {
+  background: #ffffff !important;
+  color: #333 !important;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+.multiselect-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+.nav-buttons span {
+  font-weight: 600;
+  color: #17252A;
+}
+.pie-chart-container {
+  background: linear-gradient(145deg, #22487b, #102b4d);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+  padding: 35px;
+  margin: 40px auto;
+  max-width: 720px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* =============== CHATBOT =============== */
+#chatbot-wrapper {
+  position: fixed;
+  height: 70vh;
+  width: 99vw;
+  min-width: 700px;
+  max-width: 800px;
+}
+#chatbot-container {
+  height: 100%;
+  overflow: hidden;
+}
+#chatbox {
+  height: 70%;
+  overflow-y: auto;
+}
+#chatToggle {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 5px #00e6e6; background-color: #007bff; }
+  50% { box-shadow: 0 0 20px #00e6e6; background-color: #00bcd4; }
+  100% { box-shadow: 0 0 5px #00e6e6; background-color: #007bff; }
+}
+.pulsing-intelligence {
+  animation: pulseGlow 1.5s infinite;
+}
+
+/* =============== MISC =============== */
+#alertMessage {
+  display: none;
+  padding: 10px;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 5px;
+  border: 1px solid #c3e6cb;
+  font-size: 1.2rem;
+}
+.plot-container img:empty + #alertMessage {
+  display: block;
+}
+footer {
+  background: #0a1a2f;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}

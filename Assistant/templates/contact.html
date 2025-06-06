@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<section class="container contact-section">
+  <h2>Send us a message</h2>
+  <p>Have questions or want to collaborate? Send us a message below.</p>
+  <label for="name">Your Name:</label>
+  <input type="text" id="name">
+  <label for="message">Message:</label>
+  <textarea id="message" rows="4" cols="50"></textarea>
+  <button onclick="sendMessage()">Send</button>
+</section>
+
+<section class="container contact-section">
+  <h2>Project Team Info</h2>
+  <p><i>Smart EEG Analyzer</i> was developed by:</p>
+  <ul>
+    <li><strong>Osama Bassam Yousef Ali</strong></li>
+    <li><strong>Ala’a Khaled Barakat Aladwan</strong></li>
+    <li><strong>Majdal Mazin Mustafa Almanasrah</strong></li>
+  </ul>
+  <p><u>Faculty of Artificial Intelligence</u><br><u>Al-Balqa Applied University</u></p>
+</section>
+{% endblock %}

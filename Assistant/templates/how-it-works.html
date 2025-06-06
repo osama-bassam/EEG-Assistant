@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}How It Works{% endblock %}
+
+{% block content %}
+<section class="container">
+<section class="how-section">
+  <h2>How It Works</h2>
+  <p>The Smart EEG Analyzer processes EEG data using AI to detect abnormalities and return results in seconds.</p>
+  <h3>Technology Behind</h3>
+
+
+  <p>We use neural networks trained on EEG datasets to classify and visualize brain activity:</p>
+  <img src="{{ url_for('static', filename='how it works image.png') }}" alt="Model Overview" />
+
+  <ul>
+    <li><strong>Step 1:</strong> Upload EEG Data</li>
+    <li><strong>Step 2:</strong> Preprocessing</li>
+    <li><strong>Step 3:</strong> Classification</li>
+    <li><strong>Step 4:</strong> Anomaly Detection</li>
+    <li><strong>Step 5:</strong> Results & Chatbot</li>
+  </ul>
+  </section>
+</section>
+{% endblock %}

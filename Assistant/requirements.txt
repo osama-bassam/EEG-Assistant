@@ -1,0 +1,15 @@
+streamlit
+mne
+torch
+joblib
+numpy
+scipy
+pywt
+pycatch22
+scikit-learn
+matplotlib
+tqdm
+flask
+gunicorn
+openai
+requests

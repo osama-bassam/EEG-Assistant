@@ -1,0 +1,36 @@
+<!-- Pie chart section (can stay as-is if you like the max-width) -->
+<div class="pie-chart-container text-center">
+  <img src="/summary_chart?filehash={{ filehash }}" alt="EEG Summary Chart" />
+</div>
+
+<!-- Controls and navigation (keep this wrapped for layout) -->
+<div class="container">
+  <div class="controls">
+    <div>
+      <label for="index">Window Index</label>
+      <input type="number" id="index" min="0" max="{{ max_index }}" value="0">
+    </div>
+
+    <div id="channelsSection">
+      <label for="channels">Select EEG Channels</label>
+      <select id="channels" multiple class="form-control">
+        {% for ch in channels %}
+          <option value="{{ ch }}" {% if loop.index <= 18 %}selected{% endif %}>{{ ch }}</option>
+        {% endfor %}
+      </select>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <button type="button" onclick="navigate(-1)">⬅️ Previous</button>
+    <span id="windowLabel">Window 1</span>
+    <button type="button" onclick="navigate(1)">Next ➡️</button>
+  </div>
+</div>
+
+<!-- ✅ Move plot outside the container for full width -->
+<div class="plot-container">
+  <img id="plotImg" src="" alt="Good news! Your EEG results are 100% normal. You're doing great!" />
+</div>
+
+<input type="hidden" id="filehash" value="{{ filehash }}">

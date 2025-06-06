@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Smart EEG Analyzer - Home{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>🧬 Smart EEG Analyzer</h1>
+
+  <form id="uploadForm" method="POST" enctype="multipart/form-data">
+    <label for="edfFile">Upload EEG File (.edf, .bdf, .vhdr, .cnt, .set, .gdf)</label>
+    <input type="file" name="edfFile" id="edfFile" accept=".edf,.bdf,.vhdr,.cnt,.set,.trc,.gdf">
+    <button type="submit" id="uploadBtn">Analyze EEG</button>
+  </form>
+
+  <div id="progress" style="display: none; margin-top: 15px;">
+    <div style="background-color: #eee; width: 100%; height: 20px; border-radius: 5px;">
+      <div id="barFill" style="width: 0%; height: 100%; background-color: #22C55E; border-radius: 5px;"></div>
+    </div>
+    <p id="statusText" style="margin-top: 8px; font-weight: 600; transition: color 0.4s ease;">Preparing...</p>
+  </div>
+</div>
+
+<!-- Secondary progress bar if needed -->
+<div id="progress" style="display:none; width:100%; max-width:800px; margin:0 auto 40px;">
+  <div class="bar" style="background:#E5E7EB; border-radius:8px; overflow:hidden; height:20px;">
+    <div class="bar-fill" id="barFill" style="width:0; background:#34817b; color:#fff; text-align:center; line-height:20px; font-size:12px;">0%</div>
+  </div>
+  <div class="status-text" id="statusText" style="margin-top:8px; color:#fff; text-align:center;">Idle</div>
+</div>
+
+<!-- Container to be filled dynamically after processing -->
+<div id="resultsContainer"></div>
+
+<!-- Floating Chatbot Icon -->
+<div id="chatToggle" style="position: fixed; bottom: 20px; right: 20px; background: #83cedf; color: white; border-radius: 50%; width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 1000;">
+  <span style="font-size: 30px;">🤖</span>
+</div>
+
+<!-- Chatbot UI -->
+<div id="chatbot-wrapper" style="display: none; position: fixed; bottom: 80px; right: 20px; width: 320px; z-index: 999;">
+  <div id="chatbot-container" class="container mt-4" style="background: white; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); padding: 10px;">
+    <h3>Chatbot</h3>
+    <div id="chatbox" class="border rounded p-3" style="max-height: 400px; overflow-y: auto; color: black; background-color: #f9f9f9;"></div>
+    <div class="input-group mt-3">
+      <input type="text" id="userQuery" class="form-control" placeholder="Ask about the EEG results..." />
+      <button class="btn btn-primary" id="sendQueryBtn">Send</button>
+    </div>
+  </div>
+</div>
+{% endblock %}
